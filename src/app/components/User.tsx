@@ -1,5 +1,11 @@
 import { cookies, headers } from 'next/dist/client/components/headers';
 
+export async function generateMetadata({ params }) {
+  return {
+    title: `Product ${params.id}`,
+  }
+}
+
 export async function User() {
   // this is a static request, its made on build time, one time only
   const reponse = await fetch('https://api.github.com/users/thidurante', {
