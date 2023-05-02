@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Repos } from './components/Repos';
 import { User } from './components/User';
 import { Suspense } from 'react';
+import { Counter } from './components/Counter';
 // import { useRouter } from 'next/navigation';
 
 
@@ -13,6 +14,7 @@ export default async function Home() {
     <div>
       <h1>Hello World</h1>
       <Link href="/dashboard">Dashboard</Link>
+      <Counter />
       <Suspense fallback={<p>Loading User...</p>}>
       {/* @ts-expect-error  Async server component still not supported*/}
       <User />
