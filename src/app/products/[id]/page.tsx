@@ -4,6 +4,7 @@ interface ProductProps {
   }
 }
 
+/* @ts-ignore-error */
 export async function generateMetadata({ params }) {
   return {
     title: `Product ${params.id}`,

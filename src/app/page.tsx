@@ -5,12 +5,7 @@ import { Suspense } from 'react';
 import { Counter } from './components/Counter';
 // import { useRouter } from 'next/navigation';
 
-export const metadata = {
-  title: {
-    default: 'Next13 Study',
-    template: '%s | Next13 Study',
-  }
-}
+
 
 
 export default async function Home() {
