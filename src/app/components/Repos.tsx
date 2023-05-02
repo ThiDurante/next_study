@@ -1,5 +1,7 @@
 export async function Repos() {
-  const response = await fetch('https://api.github.com/users/thidurante/repos')
+  const response = await fetch('https://api.github.com/users/thidurante/repos', {
+    next: { revalidate: 600 },
+  })
   const data = await response.json()
   return (
     <div>
